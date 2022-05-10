@@ -20,7 +20,7 @@ export class DialogComponent implements OnInit {
 
   ngOnInit(): void {
     this.productForm = this.formBuilder.group({
-      producName : ['', Validators.required],
+      productName : ['', Validators.required],
       category : ['', Validators.required],
       freshness : ['', Validators.required],
       price : ['', Validators.required],
@@ -30,7 +30,7 @@ export class DialogComponent implements OnInit {
 
     if(this.editData){
       this.actionBtn ="Editar"
-      this.productForm.controls['producName'].setValue(this.editData.producName)
+      this.productForm.controls['productName'].setValue(this.editData.productName)
       this.productForm.controls['category'].setValue(this.editData.category)
       this.productForm.controls['price'].setValue(this.editData.price)
       this.productForm.controls['comment'].setValue(this.editData.comment)
